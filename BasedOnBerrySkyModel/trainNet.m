@@ -1,6 +1,6 @@
 % function trainNet()
-minT=3;
-maxT=10;
+minT=4;
+maxT=4;
 numberOfEles=50;
 [resp_1_90,resp_11_70,resp_21_70]=sortData(minT,maxT);
 numberOfTs=maxT-minT+1;

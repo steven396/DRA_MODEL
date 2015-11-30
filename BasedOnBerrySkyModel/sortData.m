@@ -1,12 +1,12 @@
 function [resp_1_90,resp_11_70,resp_21_70]=sortData(minT,maxT)
 % minT=3;
 % maxT=10;
-load('/Users/wangxin/Desktop/T3-10NewModelWithoutIntensity/responseRotated-36-360-90.mat');
+load('/Users/wangxin/Desktop/responseRotated-36-360-90.mat');
 interval=32400;
 
 resp_1_90=responseRotated;
 for i=minT:maxT
-    n=i-3;
+    n=i;
     eval(['T',num2str(i),'=responseRotated(1+n*interval:interval*(n+1),:);']);
 end
 resp_11_70=[];
