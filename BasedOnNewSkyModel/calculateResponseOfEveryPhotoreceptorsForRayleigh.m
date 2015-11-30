@@ -1,6 +1,6 @@
-function [response,p1_sum,p2_sum]=calculateResponseOfEveryPhotoreceptors(phi_sun,theta_sun,headDirection,numberOfHalfEyes,T)
+function [response,p1_sum,p2_sum]=calculateResponseOfEveryPhotoreceptorsForRayleigh(phi_sun,theta_sun,headDirection,numberOfHalfEyes)
 [MatrixOfAngles]=angleBetweenEvectorAndEveryPhotoreceptors(phi_sun,theta_sun,headDirection,numberOfHalfEyes);
-[MatrixOfDegree,MatrixOfIntensity]=DegreeForEveryPhotoreceptors(phi_sun,theta_sun,headDirection,numberOfHalfEyes,T);
+[MatrixOfDegree]=DegreeForEveryPhotoreceptorsForRayleigh(phi_sun,theta_sun,headDirection,numberOfHalfEyes);
 numberOfEyes=2*numberOfHalfEyes;
 for i=1:numberOfEyes
     p_ref=MatrixOfDegree(:,:,i).*cos(2*MatrixOfAngles(:,:,i));
