@@ -50,7 +50,7 @@ Vector_E_2=-(Vector_zero_s_3*Vector_o_zero_1-Vector_zero_s_1*Vector_o_zero_3);%y
 % Vector_ref_3_m(oo_I)=0;
 % Vector_ref_3=sqrt(Vector_ref_3_m);
 ref_derection = headDirection_rad + photoreceptorDirection;
-
+% kkkppp=ref_derection*180/pi;
 Vector_ref_1 = cos(ref_derection);
 Vector_ref_2 = sin(ref_derection);
 

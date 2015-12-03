@@ -15,8 +15,8 @@ for j=1:numberOfHalfEyes
     delta_m_right = delta;
     Intensity_m_right = Intensity;
 %     delta_m((x.*cos(-Rtheta)-y.*sin(-Rtheta)-point_x_0(j)).^2*9+12*((x.*sin(-Rtheta)+y.*cos(-Rtheta))-point_y_0(j)).^2>1)=0;
-    delta_m_right((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_right(j)).^2*360+640*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_right(j)).^2>1)=0;
-    Intensity_m_right((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_right(j)).^2*360+640*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_right(j)).^2>1)=0;
+    delta_m_right((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_right(j)).^2*36+64*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_right(j)).^2>1)=0;
+    Intensity_m_right((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_right(j)).^2*36+64*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_right(j)).^2>1)=0;
     %     delta_m = delta_m_right;
 %     delta_m_1((x.*cos(Rtheta)+y.*sin(Rtheta)).^2*4+(y.*cos(Rtheta)-x.*sin(Rtheta)+sqrt(3)/4).^2*16/3>1)=0;
 %     Intensity_m((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0(j)).^2*9+12*((-1*x.*sin(Rtheta)+y.*cos(Rtheta))-point_y_0(j)).^2>1)=0;
@@ -26,8 +26,8 @@ end
 for j=1:numberOfHalfEyes
     delta_m_left = delta;
     Intensity_m_left = Intensity;
-    delta_m_left((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_left(j)).^2*360+640*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_left(j)).^2>1)=0;
-    Intensity_m_left((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_left(j)).^2*360+640*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_left(j)).^2>1)=0;
+    delta_m_left((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_left(j)).^2*36+64*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_left(j)).^2>1)=0;
+    Intensity_m_left((x.*cos(Rtheta)+y.*sin(Rtheta)-point_x_0_left(j)).^2*36+64*((y.*cos(Rtheta)-x.*sin(Rtheta))-point_y_0_left(j)).^2>1)=0;
     MatrixOfDegree(:,:,j+numberOfHalfEyes)=delta_m_left;
     MatrixOfIntensity(:,:,j+numberOfHalfEyes)=Intensity_m_left;
 end
