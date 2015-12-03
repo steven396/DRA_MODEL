@@ -4,7 +4,7 @@ function plotAngleBetweenEvectorAndEveryPhotoreceptors(phi_sun,theta_sun,headDir
 photoreceptorDirectionsRight=[];
 for k=1:numberOfHalfEyes
     interval=numberOfHalfEyes/2;
-    photoreceptorDirectionsRight(k)=pi/2+(k-1)*pi/interval;
+    photoreceptorDirectionsRight(k)=0+(k-1)*pi/interval;
 end
 for i=1:numberOfHalfEyes
     photoreceptorDirection=photoreceptorDirectionsRight(i);
@@ -15,7 +15,7 @@ end
 photoreceptorDirectionsLeft=[];
 for k=1:numberOfHalfEyes
     interval=numberOfHalfEyes/2;
-    photoreceptorDirectionsLeft(k)=pi/2+(k-1)*pi/interval;
+    photoreceptorDirectionsLeft(k)=0+(k-1)*pi/interval;
 end
 for i=1:numberOfHalfEyes
     photoreceptorDirection=photoreceptorDirectionsLeft(i);

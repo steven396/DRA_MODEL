@@ -33,6 +33,7 @@ for j=1:numberOfHalfEyes
 end
 
 
+
 % i=-6:17
 %     j=i+12
 %     xn=x;
