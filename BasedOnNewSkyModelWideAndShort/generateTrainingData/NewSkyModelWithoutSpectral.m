@@ -10,6 +10,7 @@ A=tan(xigema*pi/180/4);%spilt parameter. In Dennis & Berry's paper, but not accu
 
 a=linspace(0,2*pi,400);
 b=linspace(pi/2,0,100);
+
 [phio,thetao]=meshgrid(a,b);
 
 %Model from Dennis and Berry

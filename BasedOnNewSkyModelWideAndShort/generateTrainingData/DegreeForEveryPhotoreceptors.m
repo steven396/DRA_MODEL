@@ -1,8 +1,8 @@
 function [MatrixOfDegree,MatrixOfIntensity]=DegreeForEveryPhotoreceptors(phi_sun,theta_sun,headDirection,numberOfHalfEyes,T)
 % function [MatrixOfDegree,x,y,z]=DegreeForEveryPhotoreceptors(phi_sun,theta_sun,headDirection)
 % [x,y,z,delta]=CalculateRayleighModel(phi_sun,theta_sun);
-
-[x,y,z,delta,Intensity] = NewSkyModelWithoutSpectral(phi_sun,theta_sun,40,T);
+xigema=40;
+[x,y,z,delta,Intensity] = NewSkyModelWithoutSpectral(phi_sun,theta_sun,xigema,T);
 % delta=delta*1.2;
 [point_x_0_right,point_y_0_right]=CalculateCenterOfCirclesInRightEye(numberOfHalfEyes);
 [point_x_0_left,point_y_0_left]=CalculateCenterOfCirclesInLeftEye(numberOfHalfEyes);

@@ -1,6 +1,6 @@
 % function [P_Angle] =  polarizationDirection(phi_sun,theta_sun,photoreceptorDirection,headDirection)
-% function polarizationDirectionForLeftEye(phi_sun,theta_sun,photoreceptorDirection,headDirection)
-function [P_Angle] = polarizationDirectionForLeftEye(phi_sun,theta_sun,photoreceptorDirection,headDirection)
+% function polarizationDirectionForRightEye(phi_sun,theta_sun,photoreceptorDirection,headDirection)
+function [P_Angle] = polarizationDirectionForRightEye(phi_sun,theta_sun,photoreceptorDirection,headDirection)
 
 headDirection_rad=headDirection*pi/180;
 
@@ -8,7 +8,7 @@ phis=phi_sun*pi/180;%Azimuth of the sun
 thetas=theta_sun*pi/180;%Elevation of the sun
 
 a=linspace(0,2*pi,400);
-b=linspace(0,pi/2,100);
+b=linspace(pi/2,0,100);
 
 
 [phio,thetao]=meshgrid(a,b);%phio: azimuth of the observing point; thetao: elevation of the observing point
@@ -49,7 +49,7 @@ Vector_E_2=-(Vector_zero_s_3*Vector_o_zero_1-Vector_zero_s_1*Vector_o_zero_3);%y
 % oo_I=find(Vector_ref_3_m<0);
 % Vector_ref_3_m(oo_I)=0;
 % Vector_ref_3=sqrt(Vector_ref_3_m);
-ref_derection = headDirection_rad + photoreceptorDirection;
+ref_derection = headDirection_rad - photoreceptorDirection;
 % kkkppp=ref_derection*180/pi;
 Vector_ref_1 = cos(ref_derection);
 Vector_ref_2 = sin(ref_derection);
@@ -71,7 +71,7 @@ oo_I=find(L2>1);
 L2(oo_I)=1;
 
 P_Angle=acos(L2);%angle between Vector_E and reference
-% 
+
 % figure;
 % P_Angle=P_Angle*180/pi;
 % [x,y,z]=sph2cart(phio,thetao,1);% transform sphere axis to xyz

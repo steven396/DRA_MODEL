@@ -8,8 +8,8 @@ phis=phi_sun*pi/180;%Azimuth of the sun
 thetas=theta_sun*pi/180;%Elevation of the sun
 
 a=linspace(0,2*pi,400);
-b=linspace(0,pi/2,100);
-
+% b=linspace(0,pi/2,100);
+b=linspace(pi/2,0,100);
 
 [phio,thetao]=meshgrid(a,b);%phio: azimuth of the observing point; thetao: elevation of the observing point
 
