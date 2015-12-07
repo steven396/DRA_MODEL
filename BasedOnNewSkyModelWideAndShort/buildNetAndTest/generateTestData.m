@@ -11,8 +11,8 @@ for test_i=1:3
             phi_sun=phi_suns(test_k);
             theta_sun=theta_suns(test_j);
             T=Ts(test_i);
-            [response,p1_sum,p2_sum]=calculateResponseOfEveryPhotoreceptors(phi_sun,theta_sun,headDirection,36,T);
-            test(test_n,:)=response;
+            [response,p1_sum,p2_sum,response_withIntensity,p1_sum_withIntensity,p2_sum_withIntensity]=calculateResponseOfEveryPhotoreceptors(phi_sun,theta_sun,headDirection,36,T);
+            test(test_n,:)=response_withIntensity;
         end
     end
 end
